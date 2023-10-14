@@ -6,7 +6,7 @@ public class Car extends Vehicle {
     private int doors;
     private int gears;
     private boolean isManual;
-    private int currentGear;
+    protected int currentGear; // Change the access modifier to protected
     private int seats;
 
     public Car(String name, int wheels, int doors, int gears, boolean isManual, String type, int seats) {
@@ -29,4 +29,8 @@ public class Car extends Vehicle {
         move(newSpeed, newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
+    public int getCurrentGear() {
+        return currentGear;
+    }
+
 }
